@@ -7,7 +7,7 @@ pipeline {
 	}
 	environment {
 	   IMAGE = readMavenPom().getArtifactId()
-     VERSION = readMavenPom().getVersion()
+           VERSION = readMavenPom().getVersion()
     }
 	
     stages {
