@@ -12,6 +12,7 @@ pipeline {
 	
     stages {
 	    stage('Build') {
+		    checkout scm
             steps {
                 withMaven(options: [findbugsPublisher(), junitPublisher(ignoreAttachments: false)]) {
                 sh 'mvn clean findbugs:findbugs package'
